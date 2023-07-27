@@ -1,0 +1,5 @@
+<h1>Account details page</h1> 
+<h2>Nom &nbsp<%= @user.name %> </h2>
+<p>Email adress &nbsp<%= @user.email %></ul></p>
+<%= link_to ('Edit'), edit_user_path(@user) %> |
+<%= link_to ('Delete'), user_path(@user), method: :delete,data: { confirm: 'Êtes-vous sûr de vouloir supprimer cet utilisateur ?' } %>

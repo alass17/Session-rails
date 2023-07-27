@@ -1,0 +1,47 @@
+fr:
+  activerecord:
+    models:
+      task: Tâche
+    attributes:
+      task:
+        title: Titre
+        content: Contenu
+
+  errors:
+    format: "%{attribute}: %{message}"
+    messages:
+      blank: Entrez s'il vous plait
+      too_short: Veuillez entrer un mot de passe d'au moins 6 caractères
+      invalid: Veuillez saisir votre adresse e-mail
+      confirmation: Le mot de passe (confirmation) et la saisie du mot de passe ne correspondent pas
+      taken: L'adresse e-mail est déjà utilisée
+  helpers:
+    submit:
+      create: enregistrer
+      update: Mise à jour
+  common:
+    new: Créer un nouveau
+    show: détail
+    edit: modifier
+    destroy: supprimer
+    back: retour
+    confirm_destroy: Es-tu sûr de vouloir le supprimer?
+  tasks:
+    index:
+      title: Page de la liste des tâches
+    new:
+      title: Page de la liste des tâches
+    edit:
+      title: Page de la liste des tâches
+    show:
+      title: Page de la liste des tâches
+    create:
+      created: タスクを登録しました
+    update:
+      updated: タスクを更新しました
+    destroy:
+      destroyed: タスクを削除しました
+
+      user:
+        user:
+          

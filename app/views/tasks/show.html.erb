@@ -1,0 +1,14 @@
+<h1><%= t('.title') %></h1>
+
+<p>
+  <strong><%= Task.human_attribute_name(:title) %>:</strong>
+  <%= @task.title %>
+</p>
+
+<p>
+  <strong><%= Task.human_attribute_name(:content) %>:</strong>
+  <%= @task.content %>
+</p>
+
+<%= link_to t('common.edit'), edit_task_path(@task) %> |
+<%= link_to t('common.back'), tasks_path %>

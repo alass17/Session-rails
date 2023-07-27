@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CdpWebRailsSessionLoginTask</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <% flash.each do |key, value| %>
+      <%= content_tag(:div, value, class: "#{key}") %>
+    <% end %>
+    <% if logged_in? %>
+    <ul>
+    <li><%= link_to "Task column", tasks_path%></li>
+    <li><%= link_to "Register a task", new_task_path %></li>
+    <li><%= link_to "Account", user_path(current_user.id) %></li>
+    <li><%= link_to "Logout", session_path(current_user.id), method: :delete %></li>
+    </ul>
+    <% else %>
+    <ul>
+    <li><%= link_to "Account registration", new_user_path %></li>
+    <li><%= link_to "Login", new_session_path %></li>
+    </ul>
+    <% end %>
+    <%= yield %>
+  </body>
+</html>
+
+    
